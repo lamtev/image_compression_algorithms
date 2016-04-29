@@ -11,7 +11,7 @@ make_presentation() {
 		echo "presentation.tex"
 		echo "presentation failure!"
 		cd ..
-		exit 1
+		return 1
 	fi
 }
 
@@ -26,7 +26,7 @@ make_essay() {
 		echo "essay.tex"
 		echo "essay failure!"
 		cd ..
-		exit 1
+		return 1
 	fi
 }
 
@@ -35,7 +35,7 @@ zip_artifacts() {
 	if [ -z ${JOB_NAME} ] || [ -z ${BUILD_NUMBER}]; then
 		echo "Vars JOB_NAME/BUILD_NUMBER are unset"
 		echo "Zip failure!"
-		exit 1
+		return 1
 	fi
 
 	TITLE="${JOB_NAME}_v${BUILD_NUMBER}"

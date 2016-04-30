@@ -83,5 +83,9 @@ zip_artifacts() {
 }
 
 clean_build_job() {
-  rm -r build
+        if [ -r build/ ]; then
+                rm -r build
+        else
+                echo "build does not exist"
+        fi
 }

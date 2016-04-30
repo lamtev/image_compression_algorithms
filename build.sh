@@ -6,7 +6,7 @@ make_presentation() {
 		pdflatex presentation.tex
 		pdflatex presentation.tex
                 htlatex presentation.tex
-		rm -f *.aux *.log *.dvi *.toc *.out *.snm *.nav
+		rm -f *.aux *.log *.dvi *.toc *.out *.snm *.nav *.lg *.tmp *.4tc *.4ct *idv *xref
 		cd ..
 	else
 		echo "presentation.tex"
@@ -22,7 +22,7 @@ make_essay() {
 		pdflatex essay.tex
 		pdflatex essay.tex
 		htlatex essay.tex
-		rm -f *.aux *.log *.dvi *.toc *.out
+		rm -f *.aux *.log *.dvi *.toc *.out *.lg *.tmp *.4tc *.4ct *idv *xref
 		cd ..
 	else
 		echo "essay.tex"

@@ -20,8 +20,11 @@ make_essay() {
 	if [ -e "essay.tex" ]; then
 		pdflatex essay.tex
 		pdflatex essay.tex
-		htlatex essay.tex
-		rm -f *.aux *.log *.dvi *.toc *.out *.lg *.tmp *.4tc *.4ct *dvi *idv *xref *css
+		mkdir html 
+		cd html
+		htlatex ../essay.tex
+		cd ..
+		rm -f *.aux *.log *.dvi *.toc *.out
 		cd ..
 	else
 		echo "essay.tex"

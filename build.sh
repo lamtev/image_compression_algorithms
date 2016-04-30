@@ -22,7 +22,7 @@ make_essay() {
 		pdflatex essay.tex
 		pdflatex essay.tex
 		htlatex essay.tex
-		rm -f *.aux *.log *.dvi *.toc *.out *.tmp *.lg *.tmp *.4tc *.4ct *dvi *idv *xref 
+		rm -f *.aux *.log *.dvi *.toc *.out
 		cd ..
 	else
 		echo "essay.tex"

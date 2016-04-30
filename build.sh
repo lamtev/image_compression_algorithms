@@ -6,6 +6,7 @@ make_presentation() {
 		pdflatex presentation.tex
 		pdflatex presentation.tex
                 htlatex presentation.tex
+                htlatex presentation.tex
 		rm -f *.aux *.log *.dvi *.toc *.out *.snm *.nav
 		cd ..
 	else
@@ -22,6 +23,7 @@ make_essay() {
 		pdflatex essay.tex
 		pdflatex essay.tex
 		htlatex essay.tex
+                htlatex essay.tex
 		rm -f *.aux *.log *.dvi *.toc *.out *.tmp *.lg *.tmp *.4tc *.4ct *dvi *idv *xref 
 		cd ..
 	else

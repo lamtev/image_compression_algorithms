@@ -1,14 +1,33 @@
 #!/bin/bash
 
+create_build_job() {
+        mkdir build
+        cd build
+        ls
+        mkdir essay
+        cd essay
+        mkdir pdf
+        mkdir html
+        ls
+        cd ..
+        mkdir presentation
+        cd presentation
+        mkdir pdf
+        mkdir html
+        ls
+        cd ../..
+}
+
 make_presentation() {
 	cd presentation
-	if [ -e "presentation.tex" ]; then
-		pdflatex presentation.tex
-		pdflatex presentation.tex
-                htlatex presentation.tex
-                htlatex presentation.tex
+	if [ -e "presentation/presentation.tex" ]; then
+                cd build/presentation/pdf
+		pdflatex ../../../presentation/presentation.tex
+		pdflatex ../../../presentation/presentation.tex
+                cd ../html
+                htlatex ../../../presentation/presentation.tex
 		rm -f *.aux *.log *.dvi *.toc *.out *.snm *.nav
-		cd ..
+		cd ../../..
 	else
 		echo "presentation.tex"
 		echo "presentation failure!"
@@ -18,14 +37,14 @@ make_presentation() {
 }
 
 make_essay() {
-	cd essay
-	if [ -e "essay.tex" ]; then
-		pdflatex essay.tex
-		pdflatex essay.tex
-		htlatex essay.tex
-                htlatex essay.tex
+	if [ -e "essay/essay.tex" ]; then
+		cd build/essay/pdf
+		pdflatex ../../../essay/essay.tex
+		pdflatex ../../../essay/essay.tex
+                cd ../html
+                htlatex ../../../essay/essay.tex
 		rm -f *.aux *.log *.dvi *.toc *.out *.tmp *.lg *.tmp *.4tc *.4ct *dvi *idv *xref 
-		cd ..
+		cd ../../..
 	else
 		echo "essay.tex"
 		echo "essay failure!"
@@ -45,15 +64,15 @@ zip_artifacts() {
 	TITLE="${JOB_NAME}_v${BUILD_NUMBER}"
 	mkdir "$TITLE"
 
-	if [ -e "presentation/presentation.pdf" ]; then
-		cp presentation/presentation.pdf $TITLE/Presentation_v${BUILD_NUMBER}.pdf
+	if [ -e "bulid/presentation/pdf/presentation.pdf" ]; then
+		cp build/presentation/pdf/presentation.pdf $TITLE/Presentation_v${BUILD_NUMBER}.pdf
 	else
 		echo "report does not exist"
 		echo "zip failure!"
 	fi
 	
-	if [ -e "essay/essay.pdf" ]; then
-		cp essay/essay.pdf $TITLE/essay_v${BUILD_NUMBER}.pdf
+	if [ -e "build/essay/pdf/essay.pdf" ]; then
+		cp build/essay/pdf/essay.pdf $TITLE/essay_v${BUILD_NUMBER}.pdf
 	else
 		echo "essay does not exist"
 		echo "zip failure!"
@@ -61,4 +80,8 @@ zip_artifacts() {
 	
 	zip --version
 	zip $TITLE.zip $TITLE/*
+}
+
+clean_build_job() {
+  rm -r build
 }

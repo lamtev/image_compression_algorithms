@@ -5,6 +5,7 @@ make_presentation() {
 	if [ -e "presentation.tex" ]; then
 		pdflatex presentation.tex
 		pdflatex presentation.tex
+                htlatex presentation.tex
 		rm -f *.aux *.log *.dvi *.toc *.out *.snm *.nav
 		cd ..
 	else

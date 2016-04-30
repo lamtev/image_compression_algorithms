@@ -19,7 +19,6 @@ create_build_job() {
 }
 
 make_presentation() {
-	cd presentation
 	if [ -e "presentation/presentation.tex" ]; then
                 cd build/presentation/pdf
 		pdflatex ../../../presentation/presentation.tex
@@ -83,7 +82,7 @@ zip_artifacts() {
 }
 
 clean_build_job() {
-        if [ -r build/ ]; then
+        if [ -r "build/" ]; then
                 rm -r build
         else
                 echo "build does not exist"

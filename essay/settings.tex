@@ -4,6 +4,7 @@
 \usepackage[utf8x]{inputenc}
 \usepackage[T1,T2A]{fontenc}
 \usepackage[russian]{babel}
+\usepackage{xcolor}
 \usepackage{hyperref}
 \usepackage{indentfirst}
 \usepackage{listings}
@@ -12,7 +13,10 @@
 \usepackage{array}
 \usepackage{multirow}
 \usepackage{graphicx}
-
+\definecolor{linkcolor}{HTML}{0000FF} % цвет ссылок 0000FF = синий
+\definecolor{urlcolor}{HTML}{0000FF} % цвет гиперссылок
+ 
+\hypersetup{pdfstartview=FitH,  linkcolor=linkcolor,urlcolor=urlcolor, colorlinks=true}
 \usepackage{caption}
 \renewcommand{\lstlistingname}{Программа} % заголовок листингов кода
 

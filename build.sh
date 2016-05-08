@@ -80,6 +80,8 @@ compress_picture() {
 		mv temp/*.jpg temp/10.jpg
 		mv temp/10.jpg ./
 		
+		cd ..
+		
 	else
 		echo "picture not found"
 		cd ..
@@ -100,13 +102,6 @@ zip_artifacts() {
 	mkdir pics
 	cd ..
 	
-	if [ -e "compressed_pictures/*.jp*g" ]; then
-		mv compressed_pictures/*.jp*g $TITLE/pics/
-	else
-		echo "pictures does not exist"
-		echo "zip failure"
-	fi
-	
 	if [ -e "presentation/presentation.pdf" ]; then
 		cp presentation/presentation.pdf $TITLE/Presentation_v${BUILD_NUMBER}.pdf
 	else
@@ -119,6 +114,13 @@ zip_artifacts() {
 	else
 		echo "essay does not exist"
 		echo "zip failure!"
+	fi
+	
+	if [ -e "compressed_pictures/*.jp*g" ]; then
+		mv compressed_pictures/*.jp*g $TITLE/pics/
+	else
+		echo "pictures does not exist"
+		echo "zip failure"
 	fi
 	
 	zip --version

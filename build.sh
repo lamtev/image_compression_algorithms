@@ -58,7 +58,7 @@ compress_picture() {
 		mv temp/*.jpg temp/5.jpg
 		mv temp/5.jpg ./
 		
-		jpegoptim --dest=./temp/ --size=50 ../picture_for_compression/shakal.jpg
+		jpegoptim --dest=./temp/ --size=50% ../picture_for_compression/shakal.jpg
 		mv temp/*.jpg temp/6.jpg
 		mv temp/6.jpg ./
 		

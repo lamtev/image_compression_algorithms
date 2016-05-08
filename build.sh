@@ -117,9 +117,6 @@ zip_artifacts() {
 
 	TITLE="${JOB_NAME}_v${BUILD_NUMBER}"
 	mkdir "$TITLE"
-	cd $TITLE
-	mkdir pics
-	cd ..
 	
 	if [ -e "presentation/presentation.pdf" ]; then
 		cp presentation/presentation.pdf $TITLE/Presentation_v${BUILD_NUMBER}.pdf

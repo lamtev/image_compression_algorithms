@@ -45,74 +45,59 @@ compress_picture() {
 		
 		cp ../picture_for_compression/pic.jpg ./1.jpg
 		
-		jpegoptim --dest=./temp/ --size=90% ../picture_for_compression/pic.jpg
+		jpegoptim --dest=./temp/ --max=90 ../picture_for_compression/pic.jpg
 		mv temp/pic.jpg ./2.jpg
 		
-		jpegoptim --dest=./temp/ --size=80% ../picture_for_compression/pic.jpg
+		jpegoptim --dest=./temp/ --max=80 ../picture_for_compression/pic.jpg
 		mv temp/pic.jpg ./3.jpg
 		
-		jpegoptim --dest=./temp/ --size=70% ../picture_for_compression/pic.jpg
+		jpegoptim --dest=./temp/ --max=70 ../picture_for_compression/pic.jpg
 		mv temp/pic.jpg ./4.jpg
 		
-		jpegoptim --dest=./temp/ --size=60% ../picture_for_compression/pic.jpg
+		jpegoptim --dest=./temp/ --max=60 ../picture_for_compression/pic.jpg
 		mv temp/pic.jpg ./5.jpg
 		
-		jpegoptim --dest=./temp/ --size=50% ../picture_for_compression/pic.jpg
+		jpegoptim --dest=./temp/ --max=50 ../picture_for_compression/pic.jpg
 		mv temp/pic.jpg ./6.jpg
 		
-		jpegoptim --dest=./temp/ --size=40% ../picture_for_compression/pic.jpg
+		jpegoptim --dest=./temp/ --max=40 ../picture_for_compression/pic.jpg
 		mv temp/pic.jpg ./7.jpg
 		
-		jpegoptim --dest=./temp/ --size=30% ../picture_for_compression/pic.jpg
+		jpegoptim --dest=./temp/ --max=30 ../picture_for_compression/pic.jpg
 		mv temp/pic.jpg ./8.jpg
 		
-		jpegoptim --dest=./temp/ --size=20% ../picture_for_compression/pic.jpg
+		jpegoptim --dest=./temp/ --max=20 ../picture_for_compression/pic.jpg
 		mv temp/pic.jpg ./9.jpg
 		
-		jpegoptim --dest=./temp/ --size=10% ../picture_for_compression/pic.jpg
+		jpegoptim --dest=./temp/ --max=10 ../picture_for_compression/pic.jpg
 		mv temp/pic.jpg ./91.jpg
 		
-		jpegoptim --dest=./temp/ --size=9% ../picture_for_compression/pic.jpg
+		jpegoptim --dest=./temp/ --max=9../picture_for_compression/pic.jpg
 		mv temp/pic.jpg ./92.jpg
 		
-		jpegoptim --dest=./temp/ --size=8% ../picture_for_compression/pic.jpg
+		jpegoptim --dest=./temp/ --max=8 ../picture_for_compression/pic.jpg
 		mv temp/pic.jpg ./93.jpg
 		
-		jpegoptim --dest=./temp/ --size=7% ../picture_for_compression/pic.jpg
+		jpegoptim --dest=./temp/ --max=7 ../picture_for_compression/pic.jpg
 		mv temp/pic.jpg ./94.jpg
 		
-		jpegoptim --dest=./temp/ --size=6% ../picture_for_compression/pic.jpg
+		jpegoptim --dest=./temp/ --max=6 ../picture_for_compression/pic.jpg
 		mv temp/pic.jpg ./95.jpg
 		
-		jpegoptim --dest=./temp/ --size=5% ../picture_for_compression/pic.jpg
+		jpegoptim --dest=./temp/ --max=5 ../picture_for_compression/pic.jpg
 		mv temp/pic.jpg ./96.jpg
 		
-		jpegoptim --dest=./temp/ --size=4% ../picture_for_compression/pic.jpg
+		jpegoptim --dest=./temp/ --max=4 ../picture_for_compression/pic.jpg
 		mv temp/pic.jpg ./97.jpg
 		
-		jpegoptim --dest=./temp/ --size=3% ../picture_for_compression/pic.jpg
+		jpegoptim --dest=./temp/ --max=3 ../picture_for_compression/pic.jpg
 		mv temp/pic.jpg ./98.jpg
 		
-		jpegoptim --dest=./temp/ --size=2% ../picture_for_compression/pic.jpg
+		jpegoptim --dest=./temp/ --max=2 ../picture_for_compression/pic.jpg
 		mv temp/pic.jpg ./99.jpg
 		
-		jpegoptim --dest=./temp/ --size=1% ../picture_for_compression/pic.jpg
+		jpegoptim --dest=./temp/ --max=1 ../picture_for_compression/pic.jpg
 		mv temp/pic.jpg ./991.jpg
-		
-		jpegoptim --dest=./temp/ --size=50 ../picture_for_compression/pic.jpg
-		mv temp/pic.jpg ./992.jpg
-		
-		jpegoptim --dest=./temp/ --size=40 ../picture_for_compression/pic.jpg
-		mv temp/pic.jpg ./993.jpg
-		
-		jpegoptim --dest=./temp/ --size=30 ../picture_for_compression/pic.jpg
-		mv temp/pic.jpg ./994.jpg
-		
-		jpegoptim --dest=./temp/ --size=20 ../picture_for_compression/pic.jpg
-		mv temp/pic.jpg ./995.jpg
-		
-		jpegoptim --dest=./temp/ --size=10 ../picture_for_compression/pic.jpg
-		mv temp/pic.jpg ./996.jpg
 		
 		cd ..
 		

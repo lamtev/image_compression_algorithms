@@ -76,7 +76,7 @@ compress_picture() {
 		
 		jpegoptim --dest=./temp/ --size=10% ../picture_for_compression/shakal.jpg
 		mv temp/*.jpg temp/91.jpg
-		mv temp/10.jpg ./
+		mv temp/91.jpg ./
 		
 		cd ..
 		

@@ -72,7 +72,7 @@ compress_picture() {
 		jpegoptim --dest=./temp/ --max=10 ../picture_for_compression/pic.jpg
 		mv temp/pic.jpg ./91.jpg
 		
-		jpegoptim --dest=./temp/ --max=9../picture_for_compression/pic.jpg
+		jpegoptim --dest=./temp/ --max=9 ../picture_for_compression/pic.jpg
 		mv temp/pic.jpg ./92.jpg
 		
 		jpegoptim --dest=./temp/ --max=8 ../picture_for_compression/pic.jpg

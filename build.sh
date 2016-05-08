@@ -36,6 +36,7 @@ compress_picture() {
 	cd picture_for_compression
 	FOUND=$(find ./ -name "*.jp*g" -print -quit)
 	if ! [ "X$FOUND" = "X" ]; then 
+	
 		mv *.jp*g pic.jpg
 		cd ..
 		mkdir compressed_pictures
@@ -68,8 +69,35 @@ compress_picture() {
 		jpegoptim --dest=./temp/ --size=20% ../picture_for_compression/pic.jpg
 		mv temp/pic.jpg ./9.jpg
 		
-		jpegoptim --dest=./temp/ --size=1% ../picture_for_compression/pic.jpg
+		jpegoptim --dest=./temp/ --size=10% ../picture_for_compression/pic.jpg
 		mv temp/pic.jpg ./91.jpg
+		
+		jpegoptim --dest=./temp/ --size=9% ../picture_for_compression/pic.jpg
+		mv temp/pic.jpg ./92.jpg
+		
+		jpegoptim --dest=./temp/ --size=8% ../picture_for_compression/pic.jpg
+		mv temp/pic.jpg ./93.jpg
+		
+		jpegoptim --dest=./temp/ --size=7% ../picture_for_compression/pic.jpg
+		mv temp/pic.jpg ./94.jpg
+		
+		jpegoptim --dest=./temp/ --size=6% ../picture_for_compression/pic.jpg
+		mv temp/pic.jpg ./95.jpg
+		
+		jpegoptim --dest=./temp/ --size=5% ../picture_for_compression/pic.jpg
+		mv temp/pic.jpg ./96.jpg
+		
+		jpegoptim --dest=./temp/ --size=4% ../picture_for_compression/pic.jpg
+		mv temp/pic.jpg ./97.jpg
+		
+		jpegoptim --dest=./temp/ --size=3% ../picture_for_compression/pic.jpg
+		mv temp/pic.jpg ./98.jpg
+		
+		jpegoptim --dest=./temp/ --size=2% ../picture_for_compression/pic.jpg
+		mv temp/pic.jpg ./99.jpg
+		
+		jpegoptim --dest=./temp/ --size=1% ../picture_for_compression/pic.jpg
+		mv temp/pic.jpg ./991.jpg
 		
 		cd ..
 		

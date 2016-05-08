@@ -34,56 +34,55 @@ make_essay() {
 
 compress_picture() {
 	cd picture_for_compression
-	if [ -e "*.jp*g" ]; then
+	if [ -e "*.jpg" ]; then
 		cd ..
 		mkdir compressed_pictures
 		cd compressed_pictures
 		mkdir temp
 		
-		jpegoptim --dest=temp/ --size=1 ../picture_for_compression/*.jp*g
-		mv temp/*jpg temp/1.jpg
+		jpegoptim --dest=temp/ --size=1 ../picture_for_compression/*.jpg
+		mv temp/*.jpg temp/1.jpg
 		mv temp/1.jpg ./
 		
-		jpegoptim --dest=./temp/ --size=10 ../picture_for_compression/*.jp*g
-		mv temp/*jpg temp/2.jpg
+		jpegoptim --dest=./temp/ --size=10 ../picture_for_compression/*.jpg
+		mv temp/*.jpg temp/2.jpg
 		mv temp/2.jpg ./
 		
-		jpegoptim --dest=./temp/ --size=20 ../picture_for_compression/*.jp*g
-		mv temp/*jpg temp/3.jpg
+		jpegoptim --dest=./temp/ --size=20 ../picture_for_compression/*.jpg
+		mv temp/*.jpg temp/3.jpg
 		mv temp/3.jpg ./
 		
-		jpegoptim --dest=./temp/ --size=30 ../picture_for_compression/*.jp*g
-		mv temp/*jpg temp/4.jpg
+		jpegoptim --dest=./temp/ --size=30 ../picture_for_compression/*.jpg
+		mv temp/*.jpg temp/4.jpg
 		mv temp/4.jpg ./
 		
-		jpegoptim --dest=./temp/ --size=40 ../picture_for_compression/*.jp*g
-		mv temp/*jpg temp/5.jpg
+		jpegoptim --dest=./temp/ --size=40 ../picture_for_compression/*.jpg
+		mv temp/*.jpg temp/5.jpg
 		mv temp/5.jpg ./
 		
-		jpegoptim --dest=./temp/ --size=50 ../picture_for_compression/*.jp*g
-		mv temp/*jpg temp/6.jpg
+		jpegoptim --dest=./temp/ --size=50 ../picture_for_compression/*.jpg
+		mv temp/*.jpg temp/6.jpg
 		mv temp/6.jpg ./
 		
-		jpegoptim --dest=./temp/ --size=60 ../picture_for_compression/*.jp*g
-		mv temp/*jpg temp/7.jpg
+		jpegoptim --dest=./temp/ --size=60 ../picture_for_compression/*.jpg
+		mv temp/*.jpg temp/7.jpg
 		mv temp/7.jpg ./
 		
-		jpegoptim --dest=./temp/ --size=70 ../picture_for_compression/*.jp*g
-		mv temp/*jpg temp/8.jpg
+		jpegoptim --dest=./temp/ --size=70 ../picture_for_compression/*.jpg
+		mv temp/*.jpg temp/8.jpg
 		mv temp/8.jpg ./
 		
-		jpegoptim --dest=./temp/ --size=80 ../picture_for_compression/*.jp*g
-		mv temp/*jpg temp/9.jpg
+		jpegoptim --dest=./temp/ --size=80 ../picture_for_compression/*.jpg
+		mv temp/*.jpg temp/9.jpg
 		mv temp/9.jpg ./
 		
-		jpegoptim --dest=./temp/ --size=90 ../picture_for_compression/*.jp*g
-		mv temp/*jpg temp/10.jpg
+		jpegoptim --dest=./temp/ --size=90 ../picture_for_compression/*.jpg
+		mv temp/*.jpg temp/10.jpg
 		mv temp/10.jpg ./
 		
 	else
 		echo "picture not found"
 		cd ..
-		return 1
 	fi
 }
 

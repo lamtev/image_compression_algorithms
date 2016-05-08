@@ -99,6 +99,21 @@ compress_picture() {
 		jpegoptim --dest=./temp/ --size=1% ../picture_for_compression/pic.jpg
 		mv temp/pic.jpg ./991.jpg
 		
+		jpegoptim --dest=./temp/ --size=50 ../picture_for_compression/pic.jpg
+		mv temp/pic.jpg ./992.jpg
+		
+		jpegoptim --dest=./temp/ --size=40 ../picture_for_compression/pic.jpg
+		mv temp/pic.jpg ./993.jpg
+		
+		jpegoptim --dest=./temp/ --size=30 ../picture_for_compression/pic.jpg
+		mv temp/pic.jpg ./994.jpg
+		
+		jpegoptim --dest=./temp/ --size=20 ../picture_for_compression/pic.jpg
+		mv temp/pic.jpg ./995.jpg
+		
+		jpegoptim --dest=./temp/ --size=10 ../picture_for_compression/pic.jpg
+		mv temp/pic.jpg ./996.jpg
+		
 		cd ..
 		
 	else

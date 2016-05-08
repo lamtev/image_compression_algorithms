@@ -121,7 +121,7 @@ zip_artifacts() {
 	if ! [ "X$FOUND" = "X" ]; then 
 	#if [ -e "*.jpg" ]; then
 		cd ..
-		mv -i $(find compressed_pictures/ -name "*.jpg") $TITLE/pics/
+		mv -i $(find compressed_pictures/ -name "*.jpg") $TITLE/
 	else
 		echo "pictures does not exist"
 		echo "zip failure"

@@ -132,17 +132,16 @@ zip_artifacts() {
 		echo "zip failure!"
 	fi
 	
-	cd compressed_pictures
-	FOUND=$(find ./ -name "*.jp*g" -print -quit)
-	if ! [ "X$FOUND" = "X" ]; then 
-	#if [ -e "*.jpg" ]; then
-		cd ..
-		mv -i $(find compressed_pictures/ -name "*.jpg") $TITLE/
-	else
-		echo "pictures does not exist"
-		echo "zip failure"
+	if ! [ -d ./compressed_pictures ]; then
+		FOUND=$(find ./compressed_pictures -name "*.jp*g" -print -quit)
+		if ! [ "X$FOUND" = "X" ]; then 
+			cd ..
+			mv -i $(find compressed_pictures/ -name "*.jpg") $TITLE/
+		else
+			echo "pictures does not exist"
+			echo "zip failure"
+		fi
 	fi
-	
 	zip --version
 	zip $TITLE.zip $TITLE/*
 }

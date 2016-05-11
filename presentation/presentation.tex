@@ -7,6 +7,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{here}
+\usepackage{hyperref}
 \beamertemplatenavigationsymbolsempty
 \author{Дьячков Вадим Вадимович\\
 Жуйков Артём Александрович\\
@@ -51,28 +52,45 @@
 \end{itemize}
 \end{frame}
 
+
+
 \begin{frame}{Цветовое пространство $YC_bC_r$ и цветовая субдискретизация}
-
-\begin{center}
-	$Y = k_rR + k_gG + k_bB$
-
-	$C_b = B - Y$ 
-
-	$C_r = C - Y$ 
-
-	$C_g = G - Y$ 
-			
-\end{center}
 	
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[scale=0.2]{../pics/YCbCr/YCbCr_separation_h.jpg}
-		\caption{Цветное изображение и его компоненты Y, $C_B$ и $C_R$} 
-		\label{pic:YCbCr:separation}
+		\includegraphics[scale=0.8]{../pics/YCbCr/YCbCr_separation_vert.jpg}
 	\end{center}
+	\center{Цветное изображение и его компоненты Y, $C_B$ и $C_R$}
 \end{figure}	
-		
+			
 \end{frame}
+
+\begin{frame}{Цветовое пространство $YC_bC_r$ и цветовая субдискретизация}
+\begin{block}{Плоскость $YC_bC_r$ при постоянной яркости Y = 0.5}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.5]{../pics/YCbCr/YCbCr.png}
+	\end{center}
+	%\center{Плоскость $YC_bC_r$ при постоянной яркости Y = 0.5}
+\end{figure}	
+\end{block}			
+\end{frame}
+
+
+
+\begin{frame}{Цветовое пространство $YC_bC_r$ и цветовая субдискретизация}
+\begin{block}{Форматы субдискретизации}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.45]{../pics/chroma_subsampling/chroma_subsampling_ratios_pr.png}
+	\end{center}
+	%\center{Форматы субдискретизации}
+\end{figure}	
+\end{block}				
+\end{frame}
+
+
 
 \begin{frame}{Блоки}
 

@@ -30,14 +30,12 @@
 \end{frame}
 
 
-\begin{frame}{Актуальность темы}
-
-\begin{itemize}
-	\item повседневное использование людьми сжатых изображений
-	\item 
-\end{itemize}
-
-\end{frame}
+%\begin{frame}{Актуальность темы}
+%\begin{itemize}
+%	\item повседневное использование людьми сжатых изображений
+%	\item 
+%\end{itemize}
+%\end{frame}
 
 
 \begin{frame}{Методы сжатия}
@@ -48,19 +46,21 @@
 	\item RLE
 	\item Алгоритм сжатия LZW
 	\item Алгоритм Хаффмана
-	\item \dots
+	%\item \dots
 \end{itemize}
 \end{frame}
 
 
 
 \begin{frame}{Цветовое пространство $YC_bC_r$ и цветовая субдискретизация}
+\begin{block}{Цветное изображение и его компоненты Y, $C_B$ и $C_R$}
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[scale=0.8]{../pics/YCbCr/YCbCr_separation_vert.jpg}
+		\includegraphics[scale=0.77]{../pics/YCbCr/YCbCr_separation_vert.jpg}
 	\end{center}
-	\center{Цветное изображение и его компоненты Y, $C_B$ и $C_R$}
-\end{figure}	
+	%\center{Цветное изображение и его компоненты Y, $C_B$ и $C_R$}
+\end{figure}
+\end{block}
 \end{frame}
 
 
@@ -180,73 +180,23 @@
 \end{block}				
 \end{frame} 
  
- 
- 
-\begin{frame}{Блоки}
 
-\begin{block}{Заголовок блока}
-	Текст блока примера
-\end{block}
 
-\begin{alertblock}{}
-	Текст блока предупреждения 
-\end{alertblock}
-
-\end{frame}
-
-\begin{frame}{Рисунок}
+\begin{frame}{Сжимаем аудиторию}
 \begin{figure}[H]
-	\includegraphics[scale=0.4]{../pics/shakal.png}
-	\label{fig:shakal}
-\end{figure}
-\center{Текст под рисунком, не подпись}
-\end{frame}
+	\begin{center}
+		\huge\href{http://octo.ejiek.com/job/image_compression_algorithms/}{магия}
+	\end{center}
+\end{figure}					
+\end{frame} 
 
-\begin{frame}{Рисунок с позиционированием (красиво, но неудобно)}
-\begin{picture}(340,250)
-	\put(-40,18){
-		\includegraphics[width=0.5\textwidth]{../pics/shakal.png}
-	}
-	% \put(-10,18){\line(1,0){362}}	% Ориентировочные линии
-	% \put(-10,18){\line(0,1){235}}
-	% \put(-10,253){\line(1,0){362}}
-	% \put(352,18){\line(0,1){235}}
-	\put(175,130){
-		% \fbox{ % Оборачивает рамкой для более точного позиционирования (есть погрешность)
-			\begin{minipage}[t]{0.5\textwidth}
-				\begin{itemize}
-				\item Какое-то перечисление
-				\item Внизу справа
-				\item При использовании \emph{picture}
-				\item Им придется размещать все элементы слайда
-				\item Иначе результат будет трудно предсказать
-				\end{itemize}
-			\end{minipage}
-		% }
-	}	
-	\put(175,250){
-		% \fbox{ % Оборачивает рамкой для более точного позиционирования (есть погрешность)
-			\begin{minipage}[t]{0.5\textwidth}
-				\begin{figure}[H]
-				\centering
-				\includegraphics[width=\textwidth]{../pics/shakal.png}
-				\label{fig:shakal}
-				\end{figure}
-				\center{Начало координат снизу слева}
-			\end{minipage}
-		% }
-	}
-\end{picture}
-\end{frame}
 
-\begin{frame}{Формулы, сложна}
-Алфавитный подход кодирования растровых изображений
-\begin{displaymath}
-	I = M \cdot \log_{2}{N}
-\end{displaymath}
-$M$ -- количество пикселей\\
-$N$ -- количество цветов в палитре
-\end{frame}
 
+\begin{frame}{}
+\begin{center}
+	\huge Спасибо за внимание!!!
+	\includegraphics[scale=0.5]{../pics/smile.jpg}
+\end{center}				
+\end{frame}
 
 \end{document}

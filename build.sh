@@ -132,7 +132,7 @@ zip_artifacts() {
 		echo "zip failure!"
 	fi
 	
-	if ! [ -d ./compressed_pictures ]; then
+	if [ -d ./compressed_pictures ]; then
 		FOUND=$(find ./compressed_pictures -name "*.jp*g" -print -quit)
 		if ! [ "X$FOUND" = "X" ]; then 
 			cd ..

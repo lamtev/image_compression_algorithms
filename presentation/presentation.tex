@@ -40,27 +40,46 @@
 
 \begin{frame}{Методы сжатия}
 \begin{itemize}
-	\item Цветовое пространство $YC_bC_r$ и цветовая субдискретизация
-	\item Квантование и дискретизация
-	\item Вейвлет сжатие
-	\item Алгоритм RLE
-	\item Алгоритм LZW
-	\item Алгоритм Хаффмана
-	%\item \dots
+	\item С потерями
+	\begin{itemize}
+		\item Квантование и дискретизация
+		\item Цветовое пространство $YC_bC_r$ и цветовая субдискретизация
+		\item Вейвлет сжатие
+		\item Дискретное косинусное преобразование
+	\end{itemize}
+	\item Без потерь
+	\begin{itemize}
+		\item Алгоритм Хаффмана
+		\item Алгоритм LZW
+		\item Алгоритм RLE
+	\end{itemize}
 \end{itemize}
 \end{frame}
 
 
 
-\begin{frame}{Цветовое пространство $YC_bC_r$ и цветовая субдискретизация}
-\begin{block}{Цветное изображение и его компоненты Y, $C_B$ и $C_R$}
+\begin{frame}{Дискретизация}
+\begin{block}{Уменьшение точности дискретизации}
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[scale=0.77]{../pics/YCbCr/YCbCr_separation_vert.jpg}
+		\includegraphics[scale=0.73]{../pics/quantization/shakal.png}
+		%\caption{Уменьшение точности дискретизации} 
 	\end{center}
-	%\center{Цветное изображение и его компоненты Y, $C_B$ и $C_R$}
-\end{figure}
-\end{block}
+\end{figure}	
+\end{block}				
+\end{frame}
+
+
+
+\begin{frame}{Квантование}
+\begin{block}{Уменьшение точности квантования}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.48]{../pics/quantization/quantization.png}
+		%\caption{Уменьшение точности квантования} 
+	\end{center}
+\end{figure}	
+\end{block}				
 \end{frame}
 
 
@@ -79,37 +98,24 @@
 
 
 \begin{frame}{Цветовое пространство $YC_bC_r$ и цветовая субдискретизация}
+\begin{block}{Цветное изображение и его компоненты Y, $C_B$ и $C_R$}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.77]{../pics/YCbCr/YCbCr_separation_vert.jpg}
+	\end{center}
+	%\center{Цветное изображение и его компоненты Y, $C_B$ и $C_R$}
+\end{figure}
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}{Цветовое пространство $YC_bC_r$ и цветовая субдискретизация}
 \begin{block}{Форматы субдискретизации}
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.38]{../pics/chroma_subsampling/chroma_subsampling_ratios_pr.png}
 		%\center{Форматы субдискретизации}
-	\end{center}
-\end{figure}	
-\end{block}				
-\end{frame}
-
-
-
-\begin{frame}{Квантование и дискретизация}
-\begin{block}{Уменьшение точности дискретизации}
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=0.73]{../pics/quantization/shakal.png}
-		%\caption{Уменьшение точности дискретизации} 
-	\end{center}
-\end{figure}	
-\end{block}				
-\end{frame}
-
-
-
-\begin{frame}{Квантование и дискретизация}
-\begin{block}{Уменьшение точности квантования}
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=0.5]{../pics/quantization/levels_of_quantization.png}
-		%\caption{Уменьшение точности квантования} 
 	\end{center}
 \end{figure}	
 \end{block}				
@@ -156,14 +162,59 @@
 
 
 
-\begin{frame}{Алгоритм LZW}
-\begin{block}{Начальный словарь}
+\begin{frame}{Косинус}
+\begin{block}{Косинус}
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[scale=0.8]{../pics/LZW/dictionary.png}
-		%\caption{Начальный словарь}
+		\includegraphics[scale=0.47]{../pics/cosine_transform/matrix.png}
+		%\caption{Косинус}
 	\end{center}
 \end{figure}	
+\end{block}				
+\end{frame}
+
+
+
+\begin{frame}{Алгоритм Хаффмана}
+\begin{block}{Бинарное дерево Хаффмана для слова "КУКУШКА"}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.42]{../pics/Huffman/huffman.png}
+		%\caption{Бинарное дерево Хаффмана}
+	\end{center}
+\end{figure}	
+\end{block}				
+\end{frame}
+
+
+
+\begin{frame}{Алгоритм LZW}
+\begin{block}{Начальный словарь}
+%\begin{figure}[H]
+%	\begin{center}
+%		\includegraphics[scale=0.8]{../pics/LZW/dictionary.png}
+%		%\caption{Начальный словарь}
+%	\end{center}
+%\end{figure}
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+\begin{center}
+	\begin{tabular}{|c|c|}
+		\hline	
+		Символ & Код \\
+		\hline
+		  К    & 0001 \\
+		\hline
+		  У	   & 0010 \\
+		\hline  
+	  	  Ш	   & 0011 \\
+		\hline  	
+		  А    & 0100 \\
+		\hline
+	\end{tabular}
+	%\caption{Начальный словарь}
+\end{center}
+\end{table}
 \end{block}				
 \end{frame}
 
@@ -171,15 +222,52 @@
  
 \begin{frame}{Алгоритм LZW}
 \begin{block}{Процесс и результат кодирования}
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=0.55]{../pics/LZW/result.png}
-		%\caption{Процесс и результат кодирования}
-	\end{center}
-\end{figure}	
+%\begin{figure}[H]
+%	\begin{center}
+%		\includegraphics[scale=0.55]{../pics/LZW/result.png}
+%		%\caption{Процесс и результат кодирования}
+%	\end{center}
+%\end{figure}
+\begin{table}[H]
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+		\hline	
+		  Цепочка из & \multicolumn{2}{|c|}{Строка, добавляемая в} & Сжатый \\
+		  %подхачил малясь
+		  исходной строки & \multicolumn{2}{|c|}{словарь и ее код} & код \\
+		\hline
+	  	  К    & КУ & 0101 & 0001 \\
+		\hline
+		  У	   & УК & 0110 & 0010 \\
+		\hline  
+		  КУ   & КУШ & 0111 & 0101 \\
+		\hline  	
+		  Ш    & ШК & 1000 & 0011 \\
+		\hline
+		  К    & КА & 1001 & 0001 \\
+		\hline
+		  А    &    &      & 0100 \\
+		\hline
+	\end{tabular}
+	%\caption{Процесс и результат кодирования}
+\end{center}
+\end{table}
 \end{block}				
 \end{frame} 
  
+
+
+\begin{frame}{Алгоритм RLE}
+\begin{block}{RLE}
+\begin{figure}[H]
+	\begin{center}
+		%\includegraphics[scale=0.8]{../pics/}
+		%\caption{RLE}
+	\end{center}
+\end{figure}	
+\end{block}				
+\end{frame}
+
 
 
 \begin{frame}{Алгоритм RLE}

@@ -295,6 +295,54 @@ $k$ - соответствующий весовой множитель.
 		\label{pic:lzw:result}
 	\end{center}
 \end{figure}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+\begin{center}
+	\begin{tabular}{|c|c|}
+		\hline	
+		Символ & Код \\
+		\hline
+		  К    & 0001 \\
+		\hline
+		  У	   & 0010 \\
+		\hline  
+	  	  Ш	   & 0011 \\
+		\hline  	
+		  А    & 0100 \\
+		\hline
+	\end{tabular}
+	\caption{Начальный словарь} 
+	\label{table:lzw:dictionary}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+		\hline	
+		  Цепочка из & \multicolumn{2}{|c|}{Строка, добавляемая в} & Сжатый \\
+		  %подхачил малясь
+		  исходной строки & \multicolumn{2}{|c|}{словарь и ее код} & код \\
+		\hline
+	  	  К    & КУ & 0101 & 0001 \\
+		\hline
+		  У	   & УК & 0110 & 0010 \\
+		\hline  
+		  КУ   & КУШ & 0111 & 0101 \\
+		\hline  	
+		  Ш    & ШК & 1000 & 0011 \\
+		\hline
+		  К    & КА & 1001 & 0001 \\
+		\hline
+		  А    &    &      & 0100 \\
+		\hline
+	\end{tabular}
+	\caption{Процесс и результат кодирования}
+	\label{table:lzw:result}
+\end{center}
+\end{table}
+
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=1]{../pics/cosine_transform/matrix.png}

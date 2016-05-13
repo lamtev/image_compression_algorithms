@@ -118,19 +118,19 @@ zip_artifacts() {
 	TITLE="${JOB_NAME}_v${BUILD_NUMBER}"
 	mkdir "$TITLE"
 	
-	if [ -e "presentation/presentation.pdf" ]; then
-		cp presentation/presentation.pdf $TITLE/Presentation_v${BUILD_NUMBER}.pdf
-	else
-		echo "report does not exist"
-		echo "zip failure!"
-	fi
+	#if [ -e "presentation/presentation.pdf" ]; then
+	#	cp presentation/presentation.pdf $TITLE/Presentation_v${BUILD_NUMBER}.pdf
+	#else
+	#	echo "report does not exist"
+	#	echo "zip failure!"
+	#fi
 	
-	if [ -e "essay/essay.pdf" ]; then
-		cp essay/essay.pdf $TITLE/essay_v${BUILD_NUMBER}.pdf
-	else
-		echo "essay does not exist"
-		echo "zip failure!"
-	fi
+	#if [ -e "essay/essay.pdf" ]; then
+	#	cp essay/essay.pdf $TITLE/essay_v${BUILD_NUMBER}.pdf
+	#else
+	#	echo "essay does not exist"
+	#	echo "zip failure!"
+	#fi
 	
 	if [ -d ./compressed_pictures ]; then
 		FOUND=$(find ./compressed_pictures -name "*.jp*g" -print -quit)
